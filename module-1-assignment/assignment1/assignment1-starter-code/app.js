@@ -28,7 +28,7 @@ function LunchCheckController ($scope)
     for (var i in arrayOfStrings) {
         console.log(arrayOfStrings[i]);
         console.log(arrayOfStrings[i].length);
-        if(arrayOfStrings[i].length==0 || arrayOfStrings[i]==" ")
+        if(arrayOfStrings[i].length==0 || arrayOfStrings[i].trim()=="")
           count += 1;
     }
 value = (arrayOfStrings.length-count);
