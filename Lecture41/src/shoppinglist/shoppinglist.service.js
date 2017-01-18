@@ -29,15 +29,23 @@ function ShoppingListService($http, ApiBasePath) {
 
 
     service.getMenuForCategory = function (shortName) {
-    var response = $http({
+    return $http({
       method: "GET",
       url: (ApiBasePath + "/menu_items.json"),
       params: {
         category: shortName
       }
-    });
+    }).then(function(response) {
 
-    return response;
+                            var values = response.data;
+                            console.log(values);
+                            return values;                
+
+                    }, function(response) {
+                        // something went wrong
+                        return "No Data";
+                    });
+
   };
 }
 
