@@ -9,7 +9,7 @@ MainShoppingListController.$inject = ['ShoppingListService', 'items'];
 function MainShoppingListController(ShoppingListService, items) {
   var mainList = this;
   mainList.items = items;
-  console.log(mainList.items);
+  console.log("********" + mainList.items);
   
 }
 

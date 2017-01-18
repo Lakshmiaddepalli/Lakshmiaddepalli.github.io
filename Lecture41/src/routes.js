@@ -26,13 +26,8 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     controller: 'MainShoppingListController as mainList',
     resolve: {
       items: ['ShoppingListService', function (ShoppingListService) {
-         var promise = ShoppingListService.getAllCategories();
-         promise.then(function (response) {
-         return response.data;
-       })
-       .catch(function (error) {
-       console.log("Something went terribly wrong.");
-       });
+        //console.log("%%"+ ShoppingListService.getAllCategories().data);
+        return ShoppingListService.getAllCategories();
       }]
     }
   })

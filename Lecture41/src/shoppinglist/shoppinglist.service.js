@@ -12,12 +12,19 @@ function ShoppingListService($http, ApiBasePath) {
 
  
   service.getAllCategories = function () {
-   var response = $http({
+   return $http({
       method: "GET",
       url: (ApiBasePath + "/categories.json")
-    });
+    }).then(function(response) {
 
-    return response;
+                            var values = response.data;
+                            console.log(values);
+                            return values;                
+
+                    }, function(response) {
+                        // something went wrong
+                        return "No Data";
+                    });
   };
 
 
