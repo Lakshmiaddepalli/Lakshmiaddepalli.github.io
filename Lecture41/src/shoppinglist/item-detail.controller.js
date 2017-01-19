@@ -5,14 +5,15 @@ angular.module('ShoppingList')
 .controller('ItemDetailController', ItemDetailController);
 
 
-ItemDetailController.$inject = ['ShoppingListService','$stateParams', 'items'];
-function ItemDetailController('ShoppingListService',$stateParams, items) {
+ItemDetailController.$inject = ['ShoppingListService', 'item'];
+function ItemDetailController(ShoppingListService, item) {
   var itemDetail = this;
-  var item = items[$stateParams.itemId];
-  itemDetail.shortname = item.short_name;
-  itemDetail.name = item.name;
-  itemDetail.description = item.description;
-  itemDetail.pricesmall = item.pricesmall;
+  itemDetail.item = item;
+  console.log("*1*1*1*1*1*1*1*1" + itemDetail.item);
+ // itemDetail.shortname = item.short_name;
+ // itemDetail.name = item.name;
+//  itemDetail.description = item.description;
+//  itemDetail.pricesmall = item.price_small;
 }
 
 })();

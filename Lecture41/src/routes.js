@@ -26,21 +26,32 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     controller: 'MainShoppingListController as mainList',
     resolve: {
       items: ['ShoppingListService', function (ShoppingListService) {
-        //console.log("%%"+ ShoppingListService.getAllCategories().data);
+        console.log("%%"+ ShoppingListService.getAllCategories());
         return ShoppingListService.getAllCategories();
       }]
     }
   })
 
+
   .state('itemDetail', {
     url: '/item-detail/{itemId}',
-    templateUrl: 'src/shoppinglist/templates/item-detail.template.html',
+    templateUrl: 'src/shoppinglist/templates/main-itemdetail.template.html',
     controller: 'ItemDetailController as itemDetail',
      resolve: {
-      items: ['ShoppingListService', function (ShoppingListService) {
-        console.log("%%"+ ShoppingListService.getMenuForCategory());
-        return ShoppingListService.getMenuForCategory();
-      }]
+      item: ['$stateParams', 'ShoppingListService',
+            function ($stateParams, ShoppingListService) {
+              return ShoppingListService.getAllCategories()
+                .then(function (items) {
+                  console.log($stateParams);
+                //  console.log(items[$stateParams.short_name]);
+                  console.log($stateParams.itemId);
+                  console.log(items[$stateParams.itemId]);
+                  var short_name = items[$stateParams.itemId].short_name;
+                  console.log(short_name);
+                  console.log(ShoppingListService.getMenuForCategory(short_name));
+                return ShoppingListService.getMenuForCategory(short_name);
+                });
+            }]
     }
   });
 

@@ -37,7 +37,7 @@ function ShoppingListService($http, ApiBasePath) {
       }
     }).then(function(response) {
 
-                            var values = response.data;
+                            var values = response.data.menu_items;
                             console.log(values);
                             return values;                
 
