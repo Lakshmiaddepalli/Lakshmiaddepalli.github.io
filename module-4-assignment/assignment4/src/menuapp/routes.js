@@ -43,11 +43,10 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
               return MenuDataService.getAllCategories()
                 .then(function (items) {
                 //  console.log($stateParams);
-               //   console.log($stateParams.itemId);
                 //  console.log(items[$stateParams.itemId]);
                   var short_name = items[$stateParams.itemId].short_name;
                 //  console.log(short_name);
-                 console.log("jli" + MenuDataService.getItemsForCategory(short_name));
+                // console.log("jli" + MenuDataService.getItemsForCategory(short_name));
                 return MenuDataService.getItemsForCategory(short_name);
                 });
             }]
