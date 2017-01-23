@@ -1,0 +1,92 @@
+<meta charset="utf-8">
+<div class="container">
+  <h2 id="signup-title" class="text-center">Sign Up!!!</h2>
+ <fieldset>
+      <legend>SignUp</legend>
+      <form name='regForm' novalidate>
+
+        <input type="text" name="firstname" placeholder="Firstname"
+          ng-model="signup.user.firstname"
+          required
+          minlength="4"
+          ng-maxlength="10">
+          <span
+            ng-if="(regForm.firstname.$error.minlength || regForm.firstname.$error.required) && regForm.firstname.$touched">
+            Firstname must be at least 4 characters long
+          </span>
+          <span ng-if="regForm.firstname.$error.maxlength && regForm.firstname.$touched">
+            Firstname must not be longer than 10 characters
+          </span>
+          <br>
+          <br>
+          <br>
+
+          <input type="text" name="lastname" placeholder="Lastname"
+          ng-model="signup.user.lastname"
+          required
+          minlength="6"
+          ng-maxlength="10">
+          <span
+            ng-if="(regForm.lastname.$error.minlength || regForm.lastname.$error.required) && regForm.lastname.$touched">
+            Lastname must be at least 6 characters long
+          </span>
+          <span ng-if="regForm.lastname.$error.maxlength && regForm.lastname.$touched">
+            Lastname must not be longer than 10 characters
+          </span>
+          <br>
+          <br>
+          <br>
+          
+
+        <input type="email" name="email" placeholder="Email"
+          ng-model="signup.user.email"
+          required>
+          <span ng-if="regForm.email.$invalid && regForm.email.$touched">
+            Must be a valid email address: handle@domain format
+          </span>
+          <br>
+          <br>
+          <br>
+
+
+        <input type="text" name="phone" placeholder="Phone ###-###-####"
+          ng-model="signup.user.phone"
+          pattern="(\d{3})-(\d{3})-(\d{4})">
+          <span ng-if="regForm.phone.$invalid && regForm.phone.$touched">
+            Phone must be in the format ###-###-####.
+          </span>
+          <br>
+          <br>
+          <br>
+
+          <input type="text" name="menunumber" placeholder="menunumber"
+          ng-model="signup.user.menunumber" 
+          required>
+          <span
+            ng-if="(regForm.menunumber.$error.required) && regForm.menunumber.$touched">
+            Menu number must not be empty!
+          </span>
+          <span ng-if=" regForm.firstname.$touched">
+            Menu number must not be empty!
+          </span>
+          <br>
+          <br>
+          <br>
+
+        <button
+          ng-disabled="regForm.$invalid"
+          ng-click="signup.submit()">Submit</button>
+
+      </form>
+    </fieldset>
+
+    <div id="info" ng-if="signup.completed">
+      Firstname: {{ signup.user.firstname}} <br>
+      Lastname: {{ signup.user.lastname}} <br>
+      Email: {{ signup.user.email}} <br>
+      Phone: {{ signup.user.phone }}<br>
+      Menunumber: {{ signup.user.menunumber}} <br>
+    </div>
+
+</div>
+

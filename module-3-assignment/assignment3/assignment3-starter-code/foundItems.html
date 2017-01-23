@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <ol>
 <li  ng-repeat="item in items" >
     <table style="width:100%">
@@ -9,3 +10,16 @@
   
 </li>
 </ol>
+=======
+<ol>
+<li  ng-repeat="item in items" >
+    <table style="width:100%">
+  <tr>
+    <th>{{ item.name }},{{ item.short_name }},{{ item.description }}
+    <button ng-click="onRemove({index: $index});">Don't want this one!</button></th>
+  </tr>
+  </table>
+  
+</li>
+</ol>
+>>>>>>> 93304102829b7b32a5830dda63dcc5377ce6ada8
