@@ -10,7 +10,8 @@ function SignUpController(MenuService) {
  
    signup.submit = function () {
      signup.completed = true;
-     var value = signup.user.menunumber;
+     var val = signup.user.menunumber;
+     var value = val.toUpperCase();
      console.log(value);
      signup.answer = MenuService.getMenuItem(value).then(function(response) {
      signup.text =  "Your information has been saved";
