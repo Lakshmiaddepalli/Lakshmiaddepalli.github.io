@@ -46,14 +46,18 @@ function routeConfig ($stateProvider) {
       url: '/signup',
       templateUrl: 'src/public/signup/signup.html',
       controller: 'SignUpController',
-      controllerAs: 'signup'
-    //   resolve: {
-    //  item: ['MenuService', function (MenuService) {
-        
-    //    console.log(MenuService.getItem(signup.user.menunumber));
-     //   return MenuService.getItem(signup.user.menunumber);
-     //   }]
-    //  }
+      controllerAs: 'signup',
+      params: {
+        toParams: null,
+        toState: null
+      }
+  //resolve: {
+ //     item: ['$stateParams','MenuService', function ($stateParams, MenuService) {
+      //  console.log(signup.user.menunumber);
+ //       console.log(MenuService.getMenuItem($stateParams.menuItemId));
+ //         return MenuService.getMenuItem($stateParams.menuItemId);
+ //       }]
+ //    }
     });
 }
 })();

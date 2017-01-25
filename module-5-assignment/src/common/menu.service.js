@@ -2,8 +2,7 @@
 "use strict";
 
 angular.module('common')
-.service('MenuService', MenuService)
-.constant('ApiBasePath', "https://lakshmiaddepalliangularjs.herokuapp.com");
+.service('MenuService', MenuService);
 
 
 
@@ -30,27 +29,20 @@ function MenuService($http, ApiPath) {
   };
 
 
-service.getItem = function (shortName) {
-    return $http({
-      method: "GET",
-      url: (ApiBasePath + "/menu_items.json"),
-      params: {
-        category: shortName
-      }
-    }).then(function(response) {
-
-                            var values = response.data.menu_items;
-                            console.log(values);
-                            return values;                
-
-                    }, function(response) {
-                        // something went wrong
-                        return "No Data";
-                    });
-
+service.getMenuItem = function(shortName) {
+    return $http.get(ApiPath + '/menu_items/' + shortName + '.json')
+    .then(function(response) {
+      return response.data;
+    });
   };
+
+ // service.saveMenuItem = function (menuItem) {
+ //   return $http.put(ApiPath + '/menu_items/' + menuItem.short_name, menuItem)
+ //   .then(function (response) {
+ //     return response.data;
+ //   });
+//  };
+
 }
-
-
 
 })();
