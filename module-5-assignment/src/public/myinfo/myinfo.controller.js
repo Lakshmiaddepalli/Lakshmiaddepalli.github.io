@@ -25,6 +25,7 @@ function MyInfoController(MenuService) {
      myinfo.smallportionname= MenuService.menuitemvalues.small_portion_name;
      myinfo.largeportionname= MenuService.menuitemvalues.large_portion_name;
      myinfo.test1 = true;
+     MenuService.menuitemvalues = [];
 }
 
 }

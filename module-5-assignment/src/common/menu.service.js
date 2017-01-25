@@ -9,7 +9,7 @@ angular.module('common')
 MenuService.$inject = ['$http', 'ApiPath'];
 function MenuService($http, ApiPath) {
   var service = this;
-  service.menuitemvalues = [];
+  
 
   service.getCategories = function () {
     return $http.get(ApiPath + '/categories.json').then(function (response) {
@@ -31,6 +31,7 @@ function MenuService($http, ApiPath) {
 
 
 service.getMenuItem = function(shortName) {
+  service.menuitemvalues = [];
     return $http.get(ApiPath + '/menu_items/' + shortName + '.json')
     .then(function(response) {
       console.log(response.data);
