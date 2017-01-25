@@ -5,14 +5,36 @@
 <div>
 
       <div ng-show = {{myinfo.test}}>
+      <p>Not Signed Up Yet.
         <a ui-sref="public.signup">{{myinfo.text}}</a>
+        </p>
         </div>
           <br>
 
 <div ng-show= {{myinfo.test1}}>
 
+       <div>
+        FIRST NAME: {{myinfo.firstname}}
+        </div>
+          <br>
+
+          <div>
+        LAST NAME: {{myinfo.lastname}}
+        </div>
+          <br>
+
+          <div>
+        EMAIL: {{myinfo.email}}
+        </div>
+          <br>
+
+          <div>
+        PHONE: {{myinfo.phone}}
+        </div>
+          <br>
+
       <div>
-        SHORT NAME: {{myinfo.shortname}}
+        MENU NUMBER: {{myinfo.shortname}}
         </div>
           <br>
 

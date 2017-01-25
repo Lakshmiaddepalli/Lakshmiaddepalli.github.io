@@ -59,7 +59,7 @@
           <br>
           <br>
 
-          <input type="text" name="menunumber" placeholder="menunumber"
+          <input type="text" name="menunumber" placeholder="##"
           ng-model="signup.user.menunumber" />
           <br>
           <br>
@@ -67,7 +67,7 @@
          
         <button
           ng-disabled="regForm.$invalid"
-          ng-click="signup.submit()">Submit</button>
+          ng-click="signup.submit();signup.sendvalues()">Submit</button>
 
       </form>
     </fieldset>

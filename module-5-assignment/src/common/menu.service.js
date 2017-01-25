@@ -43,6 +43,19 @@ service.getMenuItem = function(shortName) {
   };
 
 
+
+  
+
+  service.sendData = function(data){
+       service.data = data;
+
+  };
+
+  service.getData = function(){
+    return service.data;
+  };
+
+
 }
 
 })();

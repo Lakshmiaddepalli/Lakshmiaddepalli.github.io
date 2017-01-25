@@ -10,12 +10,15 @@ function MyInfoController(MenuService) {
 
   if(MenuService.menuitemvalues === undefined || MenuService.menuitemvalues.length == 0)
   {
-        myinfo.text = "Not Signed Up Yet. Sign up Now!";
+        myinfo.text = " Sign up Now!";
         myinfo.test = true;
  }
  else
  {
-
+     myinfo.firstname = MenuService.data.firstname;
+     myinfo.lastname = MenuService.data.lastname;
+     myinfo.email = MenuService.data.email;
+     myinfo.phone = MenuService.data.phone;
      myinfo.shortname= MenuService.menuitemvalues.short_name;
      myinfo.name=MenuService.menuitemvalues.name;
      myinfo.image = "https://angularjslaksh.herokuapp.com/images/" + myinfo.shortname + ".jpg";
@@ -26,6 +29,8 @@ function MyInfoController(MenuService) {
      myinfo.largeportionname= MenuService.menuitemvalues.large_portion_name;
      myinfo.test1 = true;
      MenuService.menuitemvalues = [];
+     MenuService.data = [];
+
 }
 
 }
