@@ -60,15 +60,7 @@
           <br>
 
           <input type="text" name="menunumber" placeholder="menunumber"
-          ng-model="signup.user.menunumber" 
-          required>
-          <span
-            ng-if="(regForm.menunumber.$error.required) && regForm.menunumber.$touched">
-            Menu number must not be empty!
-          </span>
-          <span ng-if=" regForm.firstname.$touched">
-            Menu number must not be empty!
-          </span>
+          ng-model="signup.user.menunumber" />
           <br>
           <br>
           <br>
@@ -81,11 +73,7 @@
     </fieldset>
 
     <div id="info" ng-if="signup.completed">
-      Firstname: {{ signup.user.firstname}} <br>
-      Lastname: {{ signup.user.lastname}} <br>
-      Email: {{ signup.user.email}} <br>
-      Phone: {{ signup.user.phone }}<br>
-      Menunumber: {{ signup.user.menunumber}} <br>
+     {{signup.text}}
     </div>
 
 </div>

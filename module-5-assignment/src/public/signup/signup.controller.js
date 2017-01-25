@@ -6,32 +6,27 @@ angular.module('public')
 
 SignUpController.$inject = ['MenuService'];
 function SignUpController(MenuService) {
-  var $ctrl = this;
-  
- // $ctrl.user.firstname = '';
- // $ctrl.user.lastname = '';
- // $ctrl.user.email = '';
- // $ctrl.user.phone ='';
-  //$ctrl.user.menunumber = '';
-  
-  
-   $ctrl.submit = function () {
-     $ctrl.completed = true;
-    // console.log($ctrl.user);
- // console.log($ctrl.user.menunumber);
-     var value = $ctrl.user.menunumber;
+  var signup = this;
+ 
+   signup.submit = function () {
+     signup.completed = true;
+     var value = signup.user.menunumber;
      console.log(value);
-     var answer = MenuService.getMenuItem(value);
-     console.log(answer);
-  //   var answer1 = MenuService.saveMenuItem(answer);
-  //   console.log(answer1);
-  // signup.values = item;
-  
-  };
+     signup.answer = MenuService.getMenuItem(value).then(function(response) {
+     signup.text =  "Your information has been saved";
+    // console.log(response);
+     console.log(signup.text);
+     return response;
+     }, function(error) {
+     console.log("Error");
+     signup.text = "No such menu number exists";
+    // console.log(signup.text);
+     });
 
-//console.log($ctrl.user);
-//  console.log($ctrl.user.menunumber);
- // console.log(signup.values);
+console.log(answer);
+
+ };
+
 }
 
 

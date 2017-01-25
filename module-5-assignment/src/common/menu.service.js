@@ -9,6 +9,7 @@ angular.module('common')
 MenuService.$inject = ['$http', 'ApiPath'];
 function MenuService($http, ApiPath) {
   var service = this;
+  service.menuitemvalues = [];
 
   service.getCategories = function () {
     return $http.get(ApiPath + '/categories.json').then(function (response) {
@@ -32,16 +33,14 @@ function MenuService($http, ApiPath) {
 service.getMenuItem = function(shortName) {
     return $http.get(ApiPath + '/menu_items/' + shortName + '.json')
     .then(function(response) {
+      console.log(response.data);
+      service.menuitemvalues = response.data;
+      console.log(service.menuitemvalues);
+      console.log(service.menuitemvalues.short_name);
       return response.data;
     });
   };
 
- // service.saveMenuItem = function (menuItem) {
- //   return $http.put(ApiPath + '/menu_items/' + menuItem.short_name, menuItem)
- //   .then(function (response) {
- //     return response.data;
- //   });
-//  };
 
 }
 

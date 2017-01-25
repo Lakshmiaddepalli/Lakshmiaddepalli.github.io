@@ -51,13 +51,17 @@ function routeConfig ($stateProvider) {
         toParams: null,
         toState: null
       }
-  //resolve: {
- //     item: ['$stateParams','MenuService', function ($stateParams, MenuService) {
-      //  console.log(signup.user.menunumber);
- //       console.log(MenuService.getMenuItem($stateParams.menuItemId));
- //         return MenuService.getMenuItem($stateParams.menuItemId);
- //       }]
- //    }
+    })
+
+     .state('public.myinfo', {
+      url: '/myinfo',
+      templateUrl: 'src/public/myinfo/myinfo.html',
+      controller: 'MyInfoController',
+      controllerAs: 'myinfo',
+      params: {
+        toParams: null,
+        toState: null
+      }
     });
 }
 })();
