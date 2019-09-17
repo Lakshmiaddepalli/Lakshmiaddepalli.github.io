@@ -253,8 +253,13 @@ var journey = function(){
 
 var workexperience = function(){ 
   return botui.message.bot({ 
-      delay: 2000,
-      content: 'Currently, I am working part time as a webmaster at NYU Linguistics Department, which involves updating the website events, courses and working on website functionalities. 👩‍💻 '
+      delay: 6000,
+      content: 'Currently, as a Teaching Assistant for the Graduate course: Big Data Application Development (Scala, Spark) under Prof Suzanne Mcintosh, I assist with day-to-day projects, including evaluating graduate student assignments and projects, provide ongoing support to key faculty members and related instructional staff. I’m also a key go-to for technical issues surrounding the online forum. '
+    }).then(function(){
+        return botui.message.bot({ 
+        delay: 4000,
+        content: 'I worked part time for 8 months as a webmaster at NYU Linguistics Department, which involved updating the website events, courses and working on website functionalities. 👩‍💻'
+        });
     }).then(function(){
         return botui.message.bot({ 
         delay: 4000,
@@ -279,8 +284,20 @@ var workexperience = function(){
 var internships = function(){ 
   return botui.message.bot({ 
       delay: 2000,
-      content: 'During January, 2018, I was working as a Data Science and Analytics intern ➕ under Dr. Sameer Mathur from IIM Lucknow. Various Harvard Business case studies were analysed using statistical methods 📊  and I Finished a Capstone Project titled “Big Mart Sales Analysis” 📈 which involved steps from Hypothesis generation, Data Exploration, Data cleaning using Random Forest, Feature Engineering, and Model generation for predicting the item outlet sales price using linear regression. 📉 '
+      content: 'Carried out firm-wide cloud solution framework system (S3Sync), enabling automatic archival and content-based search of logs, applicable on-premise and cloud instances. Secured data storage using Amazon Cloud Computing Services (S3); utilized Athena software to implement search queries; AWS CodeCommit and Code Pipeline utilized to spin up (Amazon) EC2 instances; S3 buckets used for cloud application deployment.
+
+Selected Contributions:
+► Devised and developed one-time set-up of S3Sync, enabling future automated processes; attained 100% business value through time-saving efforts.
+► Launched and developed application through agnostic Python scripts and various technical tools (Ansible, GitHub, Jenkins, Jfrog, Artifactory, Confluence, and Jira).
+► Understood the working of ELK stack, Datadog for Monitoring and Analyzing Infrastructure and User Experience.
+
+Tools Involved: AWS(including S3, Athena, CloudFormation), Git, Python, Groovy, ELK(Elastic Search, LogStash, Kibana), FileBeat, Jenkins, DataDog, OpsGenie, Slack, Github, Jira, Confluence, Bash, Powershell, Octopus,Vagrant, Ansible'
     }).then(function(){
+        return botui.message.bot({ 
+        delay: 15000,
+        content: 'During January, 2018, I was working as a Data Science and Analytics intern ➕ under Dr. Sameer Mathur from IIM Lucknow. Various Harvard Business case studies were analysed using statistical methods 📊  and I Finished a Capstone Project titled “Big Mart Sales Analysis” 📈 which involved steps from Hypothesis generation, Data Exploration, Data cleaning using Random Forest, Feature Engineering, and Model generation for predicting the item outlet sales price using linear regression. 📉'
+        });
+    })then(function(){
         return botui.message.bot({ 
         delay: 15000,
         content: 'During summer of 2015, I was a Decision Support System intern at Reliance Jio, where I Performed Data Analysis of the "Switch and Walk" 4g services for deriving business intelligence using SAP business objects (Xcelsius) 📊 and developed interactive dashboards that visualised factors affecting the company\'s sales. 📉'
@@ -305,11 +322,14 @@ var projects = function(){
 
   return botui.message.bot({
    delay: 1000,
-   content: 'I am currently working on a Project under Dr Ralph Grishman, for NLP Course which aims to build a Visual Question- Answering System❓ such that given an image and an question we use the domain of NLP(Natural Language Processing) and CV(Computer Vision) to solve the task.'
+   content: 'Worked under Dr Ralph Grishman, for NLP Course and performed comprehensive research on the evolution of Visual Question Answering systems with the aim to learn and compare the architecture and performance of baselines and state of art models in the intersection of computer vision, natural language processing and deep learning using CNN and LSTMs with attention models.'
   }).then(function () {
       return botui.message.bot({ 
       delay: 5000, 
-      content: 'I am also working under Dr.Suzanne K MCintosh for Big Data Course which aims to build a Deep Learning Based Opinion Mining for Bitcoin Price Prediction. 💲'
+      content: 'Worked under Dr.Suzanne K MCintosh for Big Data Course where in built an ETL Layer with big datasets involving crime data, sex offenders data, socioeconomic data, food Inspection data, public health statistics and affordable rental housing data. 
+Built a recommender system for suggesting safe places to live on Google maps in Chicago in the neighbourhood of the given input address by the user using the unsupervised ML K-means algorithm.
+Built a predictive model for the police department to check if the arrest would be made for a given crime based on its crime description in communities of Chicago using logistic regression and neural network model which would be helpful for effective resource management and reduction of crimes.
+This was implemented to showcase how analytics can be used for resource management leading to more safer streets.'
       })
     }).then(function () {
       return botui.message.bot({ 
@@ -400,7 +420,7 @@ var professionaldevelopment = function(){
 var skills = function(){
   botui.message.bot({
    delay: 1000, // wait 1 sec.
-   content: ' ⭕ Programming languages - Java, C#, Python, R, Javascript, Scala, Ocaml, C++'
+   content: ' ⭕ Programming languages - Java, Python, Scala, R, C#, PowerShell, Linux, Batch, C, Javascript'
   }).then(function(){
     return botui.message.bot({ 
     // show first message
@@ -410,13 +430,13 @@ var skills = function(){
   }).then(function(){
     return botui.message.bot({ 
     delay: 3000,
-    content: '⭕ Devops - Jenkins, Git, Jira'
+    content: '⭕ Devops - Ansible, GitHub, Confluence, Jira, Jenkins, JFrog Artifactory, ELK, Datadog'
     });
   }).then(function(){
     return botui.message.bot({ 
     // show first message
     delay: 3000,
-    content: '⭕ Cloud - Microsoft Azure,Amazon AWS, IBM'
+    content: '⭕ Cloud - Microsoft Azure, AWS (Athena, Cloud Formation, S3, Dynamo, RDS, EC2, Code Commit, Code Pipeline, Lambda)'
     });
   }).then(function(){
     return botui.message.bot({ 
@@ -426,12 +446,12 @@ var skills = function(){
   }).then(function(){
     return botui.message.bot({ 
     delay: 3000,
-    content: '⭕ Data Science - Pandas, NumPy, Matplotlib, NLTK, Weka, RapidMiner, Knime'
+    content: '⭕ Data Science - Pandas, NumPy, Matplotlib, NLTK, Weka, RapidMiner, Knime, Pytorch, Tableau'
     });
   }).then(function(){
     return botui.message.bot({ 
     delay: 3000,
-    content: '⭕ Databases - MySQL, MSSQL, Oracle'
+    content: '⭕ Databases - MySQL, MSSQL, MongoDB'
     });
   }).then(function(){
     return botui.message.bot({ 
@@ -446,7 +466,7 @@ var skills = function(){
   }).then(function(){
     return botui.message.bot({ 
     delay: 3000,
-    content: '⭕ Others - Agile Development, Confluence'
+    content: '⭕ Big Data - Scala, PySpark, MLLib'
     });
   }).then(function () {
 		return askoptions();
