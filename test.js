@@ -284,20 +284,13 @@ var workexperience = function(){
 var internships = function(){ 
   return botui.message.bot({ 
       delay: 2000,
-      content: 'Carried out firm-wide cloud solution framework system (S3Sync), enabling automatic archival and content-based search of logs, applicable on-premise and cloud instances. Secured data storage using Amazon Cloud Computing Services (S3); utilized Athena software to implement search queries; AWS CodeCommit and Code Pipeline utilized to spin up (Amazon) EC2 instances; S3 buckets used for cloud application deployment.
-
-Selected Contributions:
-► Devised and developed one-time set-up of S3Sync, enabling future automated processes; attained 100% business value through time-saving efforts.
-► Launched and developed application through agnostic Python scripts and various technical tools (Ansible, GitHub, Jenkins, Jfrog, Artifactory, Confluence, and Jira).
-► Understood the working of ELK stack, Datadog for Monitoring and Analyzing Infrastructure and User Experience.
-
-Tools Involved: AWS(including S3, Athena, CloudFormation), Git, Python, Groovy, ELK(Elastic Search, LogStash, Kibana), FileBeat, Jenkins, DataDog, OpsGenie, Slack, Github, Jira, Confluence, Bash, Powershell, Octopus,Vagrant, Ansible'
+      content: 'During Summer of 2019, I interned at Millennium Management, a Hedge Fund, carried out firm-wide cloud solution framework system (S3Sync), enabling automatic archival and content-based search of logs, applicable on-premise and cloud instances. Secured data storage using Amazon Cloud Computing Services (S3); utilized Athena software to implement search queries; AWS CodeCommit and Code Pipeline utilized to spin up (Amazon) EC2 instances; S3 buckets used for cloud application deployment.'
     }).then(function(){
         return botui.message.bot({ 
         delay: 15000,
         content: 'During January, 2018, I was working as a Data Science and Analytics intern ➕ under Dr. Sameer Mathur from IIM Lucknow. Various Harvard Business case studies were analysed using statistical methods 📊  and I Finished a Capstone Project titled “Big Mart Sales Analysis” 📈 which involved steps from Hypothesis generation, Data Exploration, Data cleaning using Random Forest, Feature Engineering, and Model generation for predicting the item outlet sales price using linear regression. 📉'
         });
-    })then(function(){
+    }).then(function(){
         return botui.message.bot({ 
         delay: 15000,
         content: 'During summer of 2015, I was a Decision Support System intern at Reliance Jio, where I Performed Data Analysis of the "Switch and Walk" 4g services for deriving business intelligence using SAP business objects (Xcelsius) 📊 and developed interactive dashboards that visualised factors affecting the company\'s sales. 📉'
@@ -326,10 +319,7 @@ var projects = function(){
   }).then(function () {
       return botui.message.bot({ 
       delay: 5000, 
-      content: 'Worked under Dr.Suzanne K MCintosh for Big Data Course where in built an ETL Layer with big datasets involving crime data, sex offenders data, socioeconomic data, food Inspection data, public health statistics and affordable rental housing data. 
-Built a recommender system for suggesting safe places to live on Google maps in Chicago in the neighbourhood of the given input address by the user using the unsupervised ML K-means algorithm.
-Built a predictive model for the police department to check if the arrest would be made for a given crime based on its crime description in communities of Chicago using logistic regression and neural network model which would be helpful for effective resource management and reduction of crimes.
-This was implemented to showcase how analytics can be used for resource management leading to more safer streets.'
+      content: 'Worked under Dr.Suzanne K MCintosh for Big Data Course where in built an ETL Layer with big datasets involving crime data, sex offenders data, socioeconomic data, food Inspection data, public health statistics and affordable rental housing data. Built a recommender system for suggesting safe places to live on Google maps in Chicago in the neighbourhood of the given input address by the user using the unsupervised ML K-means algorithm.Built a predictive model for the police department to check if the arrest would be made for a given crime based on its crime description in communities of Chicago using logistic regression and neural network model which would be helpful for effective resource management and reduction of crimes.This was implemented to showcase how analytics can be used for resource management leading to more safer streets.'
       })
     }).then(function () {
       return botui.message.bot({ 
