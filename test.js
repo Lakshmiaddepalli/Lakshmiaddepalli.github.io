@@ -55,6 +55,9 @@ var botui = new BotUI('sreelakshmiaddepalli');
         text: 'Languages I Speak',
         value: 'languages'
       },{
+        text: 'Resume',
+        value: 'resume'
+      },{
         text: 'Fun Facts About Me',
         value: 'funfactsaboutme'
       },{
@@ -102,6 +105,9 @@ var botui = new BotUI('sreelakshmiaddepalli');
       else if(res.value == 'languages'){
       languages();
       } 
+      else if(res.value == 'resume'){
+      resume();
+      }
       else if(res.value == 'funfactsaboutme'){
       funfactsaboutme();
       } 
@@ -249,6 +255,17 @@ var journey = function(){
 	return askoptions();
     });
     
+}
+
+var resume = function(){ 
+  return (
+	  <div className="button-greeting-div">
+          <Button text="See my resume" newTab={true} href={greeting.resumeLink} />
+            </div>
+  ).then(function(){
+	return askoptions();
+    }); 
+
 }
 
 var workexperience = function(){ 
