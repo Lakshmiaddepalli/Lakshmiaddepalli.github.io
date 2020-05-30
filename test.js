@@ -258,11 +258,9 @@ var journey = function(){
 }
 
 var resume = function(){ 
-  return (
-	  <div className="button-greeting-div">
-          <Button text="See my resume" newTab={true} href={greeting.resumeLink} />
-            </div>
-  ).then(function(){
+  botui.message.add({
+  	content: ' Resume <br/><a href="https://drive.google.com/file/d/1qR1eqmFWHkR2npH4FQ7igKhcVZ_047zc/view?usp=sharing">link</a>'
+  }).then(function(){
 	return askoptions();
     }); 
 
@@ -702,23 +700,6 @@ var askoptions = function ()  {
       }
  });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
