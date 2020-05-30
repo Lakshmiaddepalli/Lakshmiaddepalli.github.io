@@ -330,7 +330,7 @@ var projects = function(){
       delay: 5000, 
       content: 'For HPML Course Implemented Distributed Deep Learning like Tiled Convolution in CUDA using CUDNN and C++. Implemented Distributed deep learning SGD on multi-GPU setup with profiling on the CIFAR dataset for high-performance ML.'
   });
-	)}.then(function(){
+  	}).then(function(){
       return botui.message.bot({ 
       delay: 5000, 
       content: 'For Advance Databases Course Built a distributed database complete with multi-version, concurrency-control, deadlock-detection, replication, Failure-recovery using objectoriented and python.'
