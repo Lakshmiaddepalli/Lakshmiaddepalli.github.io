@@ -315,8 +315,35 @@ var projects = function(){
 
   return botui.message.bot({
    delay: 1000,
-   content: 'Worked under Dr Ralph Grishman, for NLP Course and performed comprehensive research on the evolution of Visual Question Answering systems with the aim to learn and compare the architecture and performance of baselines and state of art models in the intersection of computer vision, natural language processing and deep learning using CNN and LSTMs with attention models.'
+   content: 'Worked under Dr Yann Lecunn, for Deep Learning Course and Built self-supervised models for road map prediction using ResNet18, SimCLR and DeepLab with accuracy of 73.57 percentage.Built segmentation pipeline with self supervised monocular depth estimation with depth maps, projecting 3D point clouds into 2D image
+space for object detection and classi􀂁cation through Faster RCNN. Ranked 11th out of 58 teams.'
   }).then(function () {
+      return botui.message.bot({ 
+      delay: 5000, 
+      content: 'Worked under Dr Brenden Lake, for Reinforcement Learning Course and Modified the PyGame environment for Flappy Bird using semantics and accordances to understand relevance of human priors to compare
+human cognitive models and an RL agent performance built through duelling DQN using Pygame and Python.'
+  }).then(function () {
+      return botui.message.bot({ 
+      delay: 5000, 
+      content: 'Worked under Dr Rob Fergus, for Computer Vision Course and Used Wikipedia articles to extract topics from text using LDA and use these as self-supervised features to train a CNN model on the image
+associated with the article using Pytorch.'
+  }).then(function () {
+      return botui.message.bot({ 
+      delay: 5000, 
+      content: 'For HPML Course Implemented Distributed Deep Learning like Tiled Convolution in CUDA using CUDNN and C++. Implemented Distributed deep learning SGD on multi-GPU setup with
+profiling on the CIFAR dataset for high-performance ML.'
+  }).then(function () {
+      return botui.message.bot({ 
+      delay: 5000, 
+      content: 'For Advance Databases Course Built a distributed database complete with multi-version, concurrency-control, deadlock-detection, replication, Failure-recovery using objectoriented
+and python.'
+  }).then(function () {
+      return botui.message.bot({ 
+      delay: 5000, 
+      content: 'Worked under Dr Ralph Grishman, for NLP Course and performed comprehensive research on the evolution of Visual Question Answering systems with the aim to learn and compare the architecture and performance of baselines and state of art models in the intersection of computer vision, natural language processing and deep learning using CNN and LSTMs with attention models.'
+  }).then(function () {'
+      })
+    }).then(function () {
       return botui.message.bot({ 
       delay: 5000, 
       content: 'Worked under Dr.Suzanne K MCintosh for Big Data Course where in built an ETL Layer with big datasets involving crime data, sex offenders data, socioeconomic data, food Inspection data, public health statistics and affordable rental housing data. Built a recommender system for suggesting safe places to live on Google maps in Chicago in the neighbourhood of the given input address by the user using the unsupervised ML K-means algorithm.Built a predictive model for the police department to check if the arrest would be made for a given crime based on its crime description in communities of Chicago using logistic regression and neural network model which would be helpful for effective resource management and reduction of crimes.This was implemented to showcase how analytics can be used for resource management leading to more safer streets.'
