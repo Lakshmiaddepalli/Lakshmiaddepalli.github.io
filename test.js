@@ -325,7 +325,7 @@ var projects = function(){
       delay: 5000, 
       content: 'Worked under Dr Rob Fergus, for Computer Vision Course and Used Wikipedia articles to extract topics from text using LDA and use these as self-supervised features to train a CNN model on the image associated with the article using Pytorch.'
   });
-)}.then(function(){
+}).then(function(){
       return botui.message.bot({ 
       delay: 5000, 
       content: 'For HPML Course Implemented Distributed Deep Learning like Tiled Convolution in CUDA using CUDNN and C++. Implemented Distributed deep learning SGD on multi-GPU setup with profiling on the CIFAR dataset for high-performance ML.'
