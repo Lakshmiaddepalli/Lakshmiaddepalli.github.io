@@ -315,7 +315,6 @@ var projects = function(){
   return botui.message.bot({
    delay: 1000,
    content: 'Worked under Dr Yann LeCunn, for Deep Learning Course and Built self-supervised models for road map prediction using ResNet18, SimCLR and DeepLab with accuracy of 73.57 percentage.Built segmentation pipeline with self supervised monocular depth estimation with depth maps, projecting 3D point clouds into 2D image space for object detection and classi􀂁cation through Faster RCNN. Ranked 11th out of 58 teams.'
-  });
 }).then(function () {
       return botui.message.bot({ 
       delay: 5000, 
