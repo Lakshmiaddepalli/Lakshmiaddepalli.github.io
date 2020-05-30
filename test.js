@@ -315,54 +315,54 @@ var projects = function(){
   return botui.message.bot({
    delay: 1000,
    content: 'Worked under Dr Yann LeCunn, for Deep Learning Course and Built self-supervised models for road map prediction using ResNet18, SimCLR and DeepLab with accuracy of 73.57 percentage.Built segmentation pipeline with self supervised monocular depth estimation with depth maps, projecting 3D point clouds into 2D image space for object detection and classi􀂁cation through Faster RCNN. Ranked 11th out of 58 teams.'
-}).then(function () {
+}).then(function(){
       return botui.message.bot({ 
       delay: 5000, 
       content: 'Worked under Dr Brenden Lake, for Reinforcement Learning Course and Modified the PyGame environment for Flappy Bird using semantics and accordances to understand relevance of human priors to compare human cognitive models and an RL agent performance built through duelling DQN using Pygame and Python.'
   });
-}).then(function () {
+}).then(function(){
       return botui.message.bot({ 
       delay: 5000, 
       content: 'Worked under Dr Rob Fergus, for Computer Vision Course and Used Wikipedia articles to extract topics from text using LDA and use these as self-supervised features to train a CNN model on the image associated with the article using Pytorch.'
   });
-)}.then(function () {
+)}.then(function(){
       return botui.message.bot({ 
       delay: 5000, 
       content: 'For HPML Course Implemented Distributed Deep Learning like Tiled Convolution in CUDA using CUDNN and C++. Implemented Distributed deep learning SGD on multi-GPU setup with profiling on the CIFAR dataset for high-performance ML.'
   });
-	)}.then(function () {
+	)}.then(function(){
       return botui.message.bot({ 
       delay: 5000, 
       content: 'For Advance Databases Course Built a distributed database complete with multi-version, concurrency-control, deadlock-detection, replication, Failure-recovery using objectoriented and python.'
   });
-}).then(function () {
+}).then(function(){
       return botui.message.bot({ 
       delay: 5000, 
       content: 'Worked under Dr Ralph Grishman, for NLP Course and performed comprehensive research on the evolution of Visual Question Answering systems with the aim to learn and compare the architecture and performance of baselines and state of art models in the intersection of computer vision, natural language processing and deep learning using CNN and LSTMs with attention models.'
   });
-}).then(function () {
+}).then(function(){
       return botui.message.bot({ 
       delay: 5000, 
       content: 'Worked under Dr.Suzanne K MCintosh for Big Data Course where in built an ETL Layer with big datasets involving crime data, sex offenders data, socioeconomic data, food Inspection data, public health statistics and affordable rental housing data. Built a recommender system for suggesting safe places to live on Google maps in Chicago in the neighbourhood of the given input address by the user using the unsupervised ML K-means algorithm.Built a predictive model for the police department to check if the arrest would be made for a given crime based on its crime description in communities of Chicago using logistic regression and neural network model which would be helpful for effective resource management and reduction of crimes.This was implemented to showcase how analytics can be used for resource management leading to more safer streets.'
       });
-    }).then(function () {
+    }).then(function(){
       return botui.message.bot({ 
       delay: 5000, 
       content: 'During Fall 2018, I worked under Dr. Anasse Bari for Predictive Analytics Course where we built an Anomaly detection system for credit card transactions in the Finance Sector. 💳'
       });
-      }).then(function () {
+      }).then(function(){
       return botui.message.bot({ 
       delay: 5000, 
       content: 'During Spring 2016, I worked under Prof. Sujata Khedkar during my undergraduate final project where we did an real-time aspect based sentiment analysis on product reviews and then provided product Recommendations based on it. 📱'
       });
-      }).then(function () {
+      }).then(function(){
       return botui.message.bot({ 
       delay: 4000, 
       content: 'More details of the these projects and other projects can be found on my linkedIn https://www.linkedin.com/in/sree-lakshmi-addepalli/ and you can drop me an email at sla410@nyu.edu 📧 to discuss further on these!!!'
       });
-      }).then(function () {
+      }).then(function(){
 		return askoptions();
-});
+      });
 }
 
 var hackathons = function(){
