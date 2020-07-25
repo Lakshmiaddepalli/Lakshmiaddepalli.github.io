@@ -259,7 +259,7 @@ var journey = function(){
 
 var resume = function(){ 
   botui.message.add({
-  	content: ' Resume <br/><a href="https://drive.google.com/file/d/1qR1eqmFWHkR2npH4FQ7igKhcVZ_047zc/view?usp=sharing">link</a>'
+  	content: ' Resume <br/><a href="https://drive.google.com/file/d/1umJm4zdohgrku9d0xDnRnYi3uBEiYYsX/view?usp=sharing">link</a>'
   }).then(function(){
 	return askoptions();
     }); 
