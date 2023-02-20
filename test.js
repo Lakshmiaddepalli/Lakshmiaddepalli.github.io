@@ -7,7 +7,7 @@ var botui = new BotUI('sreelakshmiaddepalli');
   }).then(function(){
      return botui.message.bot({ 
       delay: 1000, // wait 1 sec.
-      content: 'I am Sree Lakshmi Addepalli, a Software Engineer currently studying my Masters in Computer Science at Courant Institute of Mathematical Sciences, New York University 👩‍🎓'
+      content: 'I am Sree Lakshmi Addepalli, a Senio Software Engineer at Yahoo, graduated from my Masters in Computer Science at Courant Institute of Mathematical Sciences, New York University 👩‍🎓'
      });
   }).then(function () {
         return botui.message.bot({ 
@@ -172,7 +172,12 @@ var education = function(){
     return botui.message.bot({ 
     // show first message
     delay: 8000,
-    content: 'Currently i am pursuing my Masters in Computer Science at Courant Institute of Mathematical Sciences affiliated to New York University. 🗽'
+    content: 'Later I pursued my Masters in Computer Science at Courant Institute of Mathematical Sciences affiliated to New York University specialising in Artificial Intelligence. 🗽'
+    }).then(function(){
+    return botui.message.bot({ 
+    // show first message
+    delay: 8000,
+    content: 'Currently i am working as a Senior Software Engineer at Yahoo, NYC, developing cloud big data solutions.'
     });
   }).then(function(){
 	return askoptions();
@@ -188,13 +193,13 @@ var areasofinterest = function(){
     return botui.message.bot({ 
     // show first message
     delay: 4000,
-    content: 'As you might have guessed, ✔️ Natural Language Processing, ✔️ Big Data, ✔️ Machine Learning  and ✔️ Predictive Analytics.'
+    content: 'As you might have guessed, ✔️ Cloud Computing, ✔️ Big Data, ✔️ Machine Learning  and ✔️ Computer Vision.'
     });
   }).then(function(){
     return botui.message.bot({ 
     // show first message
     delay: 4000,
-    content: 'Building products keep me hooked to ✔️ Software Development, ✔️ Cloud Computing and ✔️ Devops. ' 
+    content: 'Building products keep me hooked to ✔️ Software Development, ✔️ Cloud Computing and ✔️ Big Data.  ' 
     });
     }).then(function(){
 	return askoptions();
@@ -252,6 +257,11 @@ var journey = function(){
     content: 'Having worked 2 Years as a Software Developer in Diebold Nixdorf 🏧  encouraged me to pursue my graduation in Computer Science at NYU.🗽'
     })
     }).then(function(){
+	return botui.message.bot({ 
+    delay: 10000,
+    content: 'Post my graduation in Computer Science at NYU 🗽 I joined a hedge fund in NYC, millennium to build their infrastructure platform. 🏦'
+    })
+    }).then(function(){
 	return askoptions();
     });
     
@@ -289,6 +299,16 @@ var workexperience = function(){
        return botui.message.bot({ 
        delay: 8000,
        content: 'During my first year, I contributed as a Developer for "Xpression product", a VOIP  ☎️ based Solution for ATMs by Solving defects, tasks of User stories in C# and Angular JS.'
+       });
+    }).then(function(){
+       return botui.message.bot({ 
+       delay: 8000,
+       content: 'Post my graduation in Computer Science at NYU 🗽 I joined a hedge fund in NYC, millennium to build their infrastructure platform. 🏦 '
+       });
+    }).then(function(){
+       return botui.message.bot({ 
+       delay: 8000,
+       content: 'Currently, I am working as a Senior Software Developer @ Yahoo, building their big data cloud platform. ☁️'
        });
     }).then(function(){
 	return askoptions();
