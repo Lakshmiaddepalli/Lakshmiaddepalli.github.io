@@ -7,7 +7,7 @@ var botui = new BotUI('sreelakshmiaddepalli');
   }).then(function(){
      return botui.message.bot({ 
       delay: 1000, // wait 1 sec.
-      content: 'I am Sree Lakshmi Addepalli, a Senio Software Engineer at Yahoo, graduated from my Masters in Computer Science at Courant Institute of Mathematical Sciences, New York University 👩‍🎓'
+      content: 'I am Sree Lakshmi Addepalli, a Senior Software Engineer at Yahoo, graduated from my Masters in Computer Science at Courant Institute of Mathematical Sciences, New York University 👩‍🎓'
      });
   }).then(function () {
         return botui.message.bot({ 
@@ -173,6 +173,7 @@ var education = function(){
     // show first message
     delay: 8000,
     content: 'Later I pursued my Masters in Computer Science at Courant Institute of Mathematical Sciences affiliated to New York University specialising in Artificial Intelligence. 🗽'
+    });
     }).then(function(){
     return botui.message.bot({ 
     // show first message
